@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Zen Dots';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#splash {
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background: #000000;
+    animation: splash 1s forwards 5s;
+}
+
+#splash-logo {
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 5rem;
+    height: 2rem;
+    margin: 2rem;
+    stroke-width: 3;
+    position: fixed;
+}
+
+header {
+    height: 100vh;
+    overflow: hidden;
+    background: #a3a3a3;
+}
+
+.header-container{
+    height: 100%;
+    position: relative;
+}
+
+nav {   
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-list {
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    list-style: none;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-link, .nav-link:visited {
+    color: #ffffff;
+    position: relative;
+    transition: opacity .2s ease, transform .3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    transform: translate3d(-.3rem, 0, 0);
+}
+
+.nav-link::after {
+    left: 0;
+    width: 0;
+    bottom: -2px;
+    height: 3px;
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    background-color: #ca00d8;
+    transition: width .3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+#header-logo {
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 2rem;
+    margin: 2rem;
+    position: absolute;
+}
+
+.header-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    z-index: 2;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 5.5rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.header-tagline {
+    font-size: 3rem;
+    stroke-width: 2;
+    font-weight: 900;
+    color: #272727;
+    font-family: 'Zen Dots';
+}
+
+.header-title,
+.header-tagline {
+    text-wrap: nowrap;
+}
+
+#education {
+    height: 100dvh;
+    background-color: #272727;
+}
+
+.education-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.accolades {
+    width: 100%;
+    height: 60%;
+}
+
+.accolade-column {
+    height: 100%;
+    color: #ffffff;
+}
+
+.accolade-header {
+    gap: 2rem;
+    height: 25%;
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.accolade-title {
+    text-align: center;
+}
+
+.accolade-icon {
+    width: 100%;
+    color: #ca00d8;
+    font-size: 10rem;
+    text-align: center;
+    transition: opacity .3s ease;
+}
+
+.accolade-body {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accolade-image {
+    height: 10rem;
+}
